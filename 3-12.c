@@ -1,8 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main()
-{
-    int n = 4;
+int main(int argc __attribute__((unused)), char** argv) {
+    int n = atoi(argv[1]);
     int k = 1;
     int a[n][n];
     
