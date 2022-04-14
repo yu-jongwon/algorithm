@@ -3,9 +3,8 @@
 
 #define MIN(a, b) ((a) < (b) ? (a) : (b))
 
-int main()
-{
-    int n = 4;
+int main(int argc __attribute__((unused)), char** argv) {
+    int n = atoi(argv[1]);
     int a[n][n];
 
     for (int i = 0; i < n; i++) {
