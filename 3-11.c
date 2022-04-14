@@ -3,9 +3,8 @@
 
 #define MAX(a, b) ((a) > (b) ? (a) : (b))
 
-int main()
-{
-    int n = 5;
+int main(int argc __attribute__((unused)), char** argv) {
+    int n = atoi(argv[1]);
     int a[n][n];
 
     for (int i = 0; i < n; i++) {
@@ -16,10 +15,7 @@ int main()
             if (k > n-i-1) k = n-i-1;
             if (k > n-j-1) k = n-j-1;
             
-            a[i][j] = n / 2 - k;
-            if (n % 2 == 1) {
-                a[i][j] += 1;
-            }
+            a[i][j] = n / 2 - k + n % 2;
         }
     }
 
